@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .header {
+            background-color: #fff;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            padding: 16px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .container p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0062cc;
+        }
+
+        .prank-message {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+            padding: 16px;
+            text-align: center;
+            display: none;
+        }
+
+        .prank-message h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>You Have Received your 25$ in your account, date 1st April 2023</h1>
+    </div>
+    <div class="container">
+        <p>Welcome to our website! We offer the best deals on the latest products.</p>
+       <a href="https://mma.prnewswire.com/media/1480046/LOL_Surprise_Logo.jpg?p=facebook" target="_blank"> <button class="button">  Shop Now</button></a>
+    </div>
+    <div class="prank-message" id="prank-message">
+        <h1>You have been pranked!</h1>
+    </div>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+                document.getElementById('prank-message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
